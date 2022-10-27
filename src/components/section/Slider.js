@@ -11,7 +11,7 @@ import "swiper/css/autoplay";
 
 function Slider(props) {
   return (
-    <section id="sliderTpe" className={`slider__wrap ${props.fonts}`}>
+    <section id="sliderType" className={`slider__wrap ${props.fonts}`}>
       <div className="slider__inner">
         <Swiper
           autoplay={{
@@ -21,7 +21,7 @@ function Slider(props) {
           pagination={{ clickable: true }}
           navigation={true}
           modules={[Navigation, Pagination, Autoplay]}
-          className="mySwiper section"
+          className="mySwiper"
         >
           <SwiperSlide>
             <div class="desc">
