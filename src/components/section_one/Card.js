@@ -1,45 +1,30 @@
 import React from "react";
 
-const cardMainText =
-  {
-    title : "#여행_중_게임은_못참지🎮",
-    desc : "새롭고 혁신적인 PS5™ 컨트롤러로 완전히 몰입할 수 있는 게임 경험을 즐겨보시기 바랍니다."
-  };
-
-const cardInfo = [
-  {
-    title : "다양한 인터렉티브 반응",
-    desc : "인게임 기어 및 환경과 상호작용하면서 활시위를 당길 때 점점 팽팽해지는 느낌과 질주하는 자동차의 급브레이크를 밟는 느낌 등 액션과 함께 어우러집니다.",
-    src : "card_bg01_01.jpg",
-    alt : "다양한 인터렉티브 반응"
-  },
-  {
-    title : "게임패드 지원",
-    desc : "내장 마이크를 사용하거나 3.5mm 잭에 미니멀하고 아이코닉한 헤드셋을 연결 전용 음소거 버튼을 사용하여 음성 캡처를 즉시 끌 수 있습니다.",
-    src : "card_bg01_02.jpg",
-    alt : "게임패드 지원"
-  },
-  {
-    title : "진동을 통한 생생한 현장감",
-    desc : "기존의 진동 모터 대신 듀얼 액추에이터가 선사하는 물리적 반응형 피드백을 경험해보세요, 게임 내 환경에서부터 실감 나는 역동적인 진동이 손을 타고 전해집니다.",
-    src : "card_bg01_03.jpg",
-    alt : "진동을 통한 생생한 현장감"
-  }
-];
-
-const CardInfoText = ({title, desc, src, alt}) => {
+function card(props) {
   return (
+    <section
+      id="cardType"
+      class={`card__wrap ${props.attr[0]} ${props.attr[1]} ${props.attr[2]} `}
+    >
+      <h2>#여행_중_게임은_못참지🎮</h2>
+      <p>
+        새롭고 혁신적인 PS5™ 컨트롤러로 완전히 몰입할 수 있는 게임 경험을
+        즐겨보시기 바랍니다.
+      </p>
+      <div class="card__inner">
         <article class="card">
           <figure class="card__header">
             <img
-              src={`../assets/img/${src}`}
-              alt={`${src}`}
+              src="../assets/img/card_bg01_01.jpg"
+              alt="다양한 인터렉티브 반응"
             />
           </figure>
           <div class="card__body">
-            <h3 class="tit">{title}</h3>
+            <h3 class="tit">다양한 인터렉티브 반응</h3>
             <p class="desc">
-              {desc}
+              인게임 기어 및 환경과 상호작용하면서 활시위를 당길 때 점점
+              팽팽해지는 느낌과 질주하는 자동차의 급브레이크를 밟는 느낌 등
+              액션과 함께 어우러집니다.
             </p>
             <a class="btn loading" href="/">
               더 자세히 보기
@@ -60,24 +45,7 @@ const CardInfoText = ({title, desc, src, alt}) => {
             </a>
           </div>
         </article>
-  )
-}
-
-function card(props) {
-  return (
-    <section
-      id="cardType"
-      class={`card__wrap ${props.attr[0]} ${props.attr[1]} ${props.attr[2]} `}
-    >
-      <h2>{cardMainText.title}</h2>
-      <p>
-        {cardMainText.desc}
-      </p>
-      <div class="card__inner">
-        {cardInfo.map((info, index) => (
-            <CardInfoText key={index} title={info.title} desc={info.desc} src={info.src} alt={info.alt}/>
-        ))}
-        {/* <article class="card">
+        <article class="card">
           <figure>
             <img src="../assets/img/card_bg01_02.jpg" alt="게임패드 지원" />
           </figure>
@@ -138,7 +106,7 @@ function card(props) {
               </span>
             </a>
           </div>
-        </article> */}
+        </article>
       </div>
     </section>
   );

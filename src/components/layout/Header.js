@@ -5,7 +5,7 @@ function Header(props) {
     <header id="headerType" className={`header__wrap ${props.fonts}`}>
       <div className="header__inner">
         <div className="header__logo">
-          <a href="/">#여행_가자!</a>
+          <a href="/">NY MUSEUM</a>
         </div>
         <div className="header__menu">
           <ul>

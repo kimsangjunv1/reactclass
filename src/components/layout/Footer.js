@@ -1,13 +1,13 @@
 import React from "react";
 
-function Footer(attr) {
+function Footer(props) {
   return (
     <footer
       id="footerType"
-      className={`footer__wrap ${attr[0]} ${attr[1]} ${attr[2]}`}
+      className={`footer__wrap ${props.attr[0]} ${props.attr[1]} ${props.attr[2]}`}
     >
       <h2 className="blind">푸터 영역</h2>
-      <div className={`footer__inner ${attr[3]}`}>
+      <div className={`footer__inner ${props.attr[3]}`}>
         <div className="footer__menu">
           <div>
             <h3>도움말</h3>
